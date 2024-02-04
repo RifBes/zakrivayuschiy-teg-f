@@ -24,9 +24,7 @@
 
     --text-on-img: #fff;
 
-    --repeating-gradient-color: #d3d3d3;
+    --gradient-color-repeating: #d3d3d3;
     --gradient-color-from: #e7e7e7;
     --gradient-color-to: #1a1a1a;
-    --repeating-gradient-direction: to right;
-    --gradient-direction: to bottom;
 }

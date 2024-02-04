@@ -84,19 +84,25 @@
 }
 
 @keyframes scale-heart {
-    from {
+    0% {
         scale: 1;
     }
-    to {
+    50% {
         scale: 1.5;
+    }
+    100% {
+        scale: 1;
     }
 }
 
 @keyframes sparks-blink {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    50% {
         opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

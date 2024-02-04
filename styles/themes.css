@@ -22,7 +22,7 @@
 
     --text-on-img: #fff;
 
-    --repeating-gradient-color: #d3d3d3;
+    --gradient-color-repeating: #d3d3d3;
     --gradient-color-from: #e7e7e7;
     --gradient-color-to: #1a1a1a;
 }
@@ -41,7 +41,7 @@
 
     --text-on-img: #000;
 
-    --repeating-gradient-color: #000;
+    --gradient-color-repeating: #000;
     --gradient-color-from: #007f0c;
     --gradient-color-to: #004306;
 
@@ -64,7 +64,7 @@
 
         --text-on-img: #000;
 
-        --repeating-gradient-color: #000;
+        --gradient-color-repeating: #000;
         --gradient-color-from: #007f0c;
         --gradient-color-to: #004306;
 
@@ -91,7 +91,7 @@
 
         --text-on-img: #fff;
 
-        --repeating-gradient-color: #d3d3d3;
+        --gradient-color-repeating: #d3d3d3;
         --gradient-color-from: #e7e7e7;
         --gradient-color-to: #1a1a1a;
     }

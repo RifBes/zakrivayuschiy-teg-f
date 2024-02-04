@@ -23,15 +23,15 @@
     min-block-size: 100dvb;
     background-image: repeating-linear-gradient(
             to right,
-            var(--repeating-gradient-color),
-            var(--repeating-gradient-color) 2px,
+            var(--gradient-color-repeating),
+            var(--gradient-color-repeating) 2px,
             transparent 2px,
             transparent 4px
         ),
         repeating-linear-gradient(
             to bottom,
-            var(--repeating-gradient-color),
-            var(--repeating-gradient-color) 2px,
+            var(--gradient-color-repeating),
+            var(--gradient-color-repeating) 2px,
             transparent 2px,
             transparent 4px
         ),
@@ -56,6 +56,7 @@
     font-size: 14px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .button span {
@@ -123,7 +124,7 @@
 
 .header__title {
     font-size: 23px;
-    font-size: clamp(14px, 1.5vw, 23px);
+    font-size: clamp(14px, 1.6vw, 23px);
     margin-bottom: 25px;
 }
 
@@ -140,6 +141,7 @@
 }
 
 .theme-menu__button {
+    cursor: pointer;
     text-transform: uppercase;
     background: transparent;
     border: none;
@@ -195,9 +197,26 @@
     }
 }
 
+.cards {
+    margin-bottom: 45px;
+}
+
+/* .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+} */
+
+.card__content:not(:last-child) {
+    margin-bottom: 50px;
+}
+
 .card__content {
     background-color: var(--bg-color);
-    margin-bottom: 50px;
+}
+
+.card__content:last-child .card__info .card__info-text {
+    padding-right: 1px;
 }
 
 .card__title {
@@ -328,7 +347,7 @@
 }
 
 .footer__button {
-    padding: 18px 21px;
+    padding: 16px 21px;
     display: flex;
     align-items: center;
     gap: 8px;

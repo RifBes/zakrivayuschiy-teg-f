@@ -20,13 +20,11 @@
     --heart-countor: #000;
     --heart-color: #ff0000;
 
-    --watermark-color: #fff;
+    --text-on-img: #fff;
 
-    --repeating-linear-gradient-color: #d3d3d3;
-    --linear-gradient-color-from: #e7e7e7;
-    --linear-gradient-color-to: #1a1a1a;
-    --repeating-gradient-direction: to right;
-    --linear-gradient-direction: to bottom;
+    --repeating-gradient-color: #d3d3d3;
+    --gradient-color-from: #e7e7e7;
+    --gradient-color-to: #1a1a1a;
 }
 
 :root.theme-dark {
@@ -41,19 +39,17 @@
     --button-color: #00cc14;
     --color-accent: #00cc14;
 
-    --watermark-color: #000;
+    --text-on-img: #000;
 
-    --repeating-linear-gradient-color: #000;
-    --linear-gradient-color-from: #007f0c;
-    --linear-gradient-color-to: #004306;
-    --repeating-gradient-direction: to right;
-    --linear-gradient-direction: to bottom;
+    --repeating-gradient-color: #000;
+    --gradient-color-from: #007f0c;
+    --gradient-color-to: #004306;
 
     --heart-countor: #00cc14;
     --heart-color: #00cc14;
 }
 
-@media (prefers-color-theme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --text-color: #00cc14;
         --border-color: #00cc14;
@@ -63,11 +59,21 @@
             rgb(0, 127, 12),
             rgb(0, 67, 6) 100%
         );
-        --watermark-color: #000;
+        --button-color: #00cc14;
+        --color-accent: #00cc14;
+
+        --text-on-img: #000;
+
+        --repeating-gradient-color: #000;
+        --gradient-color-from: #007f0c;
+        --gradient-color-to: #004306;
+
+        --heart-countor: #00cc14;
+        --heart-color: #00cc14;
     }
 }
 
-@media (prefers-color-theme: light) {
+@media (prefers-color-scheme: light) {
     :root {
         --text-color: #000;
         --border-color: #000;
@@ -77,9 +83,16 @@
             rgb(231, 231, 231),
             rgb(26, 26, 26) 100%
         );
+        --button-color: #fff;
+        --color-accent: #000;
 
-        --watermark-color: #fff;
+        --heart-countor: #000;
+        --heart-color: #ff0000;
 
-        --bg-image: ;
+        --text-on-img: #fff;
+
+        --repeating-gradient-color: #d3d3d3;
+        --gradient-color-from: #e7e7e7;
+        --gradient-color-to: #1a1a1a;
     }
 }

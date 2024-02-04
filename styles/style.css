@@ -22,19 +22,23 @@
     min-inline-size: 320px;
     min-block-size: 100dvb;
     background-image: repeating-linear-gradient(
-            var(--repeating-linear-gradient-color) 0 2px,
+            to right,
+            var(--repeating-gradient-color),
+            var(--repeating-gradient-color) 2px,
             transparent 2px,
             transparent 4px
         ),
         repeating-linear-gradient(
-            var(--repeating-gradient-direction),
-            var(--repeating-linear-gradient-color) 0 2px,
+            to bottom,
+            var(--repeating-gradient-color),
+            var(--repeating-gradient-color) 2px,
             transparent 2px,
             transparent 4px
         ),
         linear-gradient(
-            var(--linear-gradient-color-from) 0.01%,
-            var(--linear-gradient-color-to)
+            to bottom,
+            var(--gradient-color-from) 0.01%,
+            var(--gradient-color-to)
         );
     background-size: cover;
     background-attachment: fixed;
@@ -210,7 +214,7 @@
     border: 2px solid var(--border-color);
 }
 
-.card__watermark {
+.card__image-text {
     mix-blend-mode: hard-light;
     position: absolute;
     right: 27px;
@@ -218,18 +222,18 @@
     font-family: var(--font-accent);
     font-size: 14px;
     opacity: 0.5;
-    text-shadow: 1px 0 0 var(--watermark-color), 0 1px var(--watermark-color),
-        1px 0 var(--watermark-color), 0 -1px var(--watermark-color);
+    text-shadow: 1px 0 0 var(--text-on-img), 0 1px var(--text-on-img),
+        1px 0 var(--text-on-img), 0 -1px var(--text-on-img);
 }
 
 /* @supports (
-    (text-stroke: 1px var(--watermark-color)) or
-        (-webkit-text-stroke: 1px var(--watermark-color))
+    (text-stroke: 1px var(--text-on-img)) or
+        (-webkit-text-stroke: 1px var(--text-on-img))
 ) {
     .card__image::after {
         text-shadow: none;
-        -webkit-text-stroke: 1px var(--watermark-color);
-        text-stroke: 1px var(--watermark-color);
+        -webkit-text-stroke: 1px var(--text-on-img);
+        text-stroke: 1px var(--text-on-img);
     }
 } */
 

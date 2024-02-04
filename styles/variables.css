@@ -22,11 +22,11 @@
     --heart-countor: #000;
     --heart-color: #ff0000;
 
-    --watermark-color: #fff;
+    --text-on-img: #fff;
 
-    --repeating-linear-gradient-color: #d3d3d3;
-    --linear-gradient-color-from: #e7e7e7;
-    --linear-gradient-color-to: #1a1a1a;
+    --repeating-gradient-color: #d3d3d3;
+    --gradient-color-from: #e7e7e7;
+    --gradient-color-to: #1a1a1a;
     --repeating-gradient-direction: to right;
-    --linear-gradient-direction: to bottom;
+    --gradient-direction: to bottom;
 }

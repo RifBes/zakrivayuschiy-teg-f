@@ -18,13 +18,15 @@
     --color-accent: #000;
 
     --heart-countor: #000;
-    --heart-color: #ff0000;
 
     --text-on-img: #fff;
 
     --gradient-color-repeating: #d3d3d3;
     --gradient-color-from: #e7e7e7;
     --gradient-color-to: #1a1a1a;
+
+    --text-width: 400;
+    --title-width: 700;
 }
 
 :root.theme-dark {
@@ -46,7 +48,9 @@
     --gradient-color-to: #004306;
 
     --heart-countor: #00cc14;
-    --heart-color: #00cc14;
+
+    --text-width: 465;
+    --title-width: 785;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,30 +73,5 @@
         --gradient-color-to: #004306;
 
         --heart-countor: #00cc14;
-        --heart-color: #00cc14;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --text-color: #000;
-        --border-color: #000;
-        --bg-color: #fff;
-        --bg-color-grad: linear-gradient(
-            180deg,
-            rgb(231, 231, 231),
-            rgb(26, 26, 26) 100%
-        );
-        --button-color: #fff;
-        --color-accent: #000;
-
-        --heart-countor: #000;
-        --heart-color: #ff0000;
-
-        --text-on-img: #fff;
-
-        --gradient-color-repeating: #d3d3d3;
-        --gradient-color-from: #e7e7e7;
-        --gradient-color-to: #1a1a1a;
     }
 }

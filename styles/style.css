@@ -45,7 +45,8 @@
 }
 
 .container {
-    max-width: 700px;
+    /* max-width: 700px; */
+    max-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
     margin: 0 auto;
 }
 
@@ -57,6 +58,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
 
 .button span {
@@ -68,8 +70,10 @@
 
 .button:focus {
     outline: none;
+}
+
+.button:focus-visible {
     box-shadow: 2px 2px 0px 0px var(--border-color);
-    transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -112,7 +116,8 @@
 
 .header__logo {
     text-decoration: none;
-    font-size: clamp(49px, 4.5vw, 65px);
+    /* font-size: clamp(42px, 13vw, 65px); */
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     margin-bottom: 20px;
 }
 
@@ -145,6 +150,7 @@
     background: transparent;
     border: none;
     position: relative;
+    transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus,
@@ -162,7 +168,7 @@
     height: 2px;
     background-color: var(--text-color);
     transform-origin: left;
-    transition: scale 0.3s ease-in-out;
+    transition: scale 0.3s ease;
     left: 5px;
 }
 
@@ -172,7 +178,6 @@
 
 .theme-menu__button:hover {
     opacity: 0.6;
-    transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled {
@@ -183,38 +188,25 @@
 .theme-menu__button:disabled::after {
     content: '▶';
     position: absolute;
+    top: 0;
     left: -17px;
-    animation: headerAnimation 0.5s linear infinite alternate;
-}
-
-@keyframes headerAnimation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(5px);
-    }
+    animation: headerAnimation 0.5s ease-in-out infinite alternate;
 }
 
 .cards {
-    margin-bottom: 45px;
+    margin-bottom: 48px;
 }
 
-/* .cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-} */
-
 .card__content:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
 }
 
 .card__content {
     background-color: var(--bg-color);
+    font-variation-settings: 'wght' var(--text-width);
 }
 
-.card__content:last-child .card__info .card__info-text {
+.ugly-text {
     padding-right: 1px;
 }
 
@@ -223,6 +215,7 @@
     line-height: 22px;
     font-size: 18px;
     padding: 4px 10px;
+    font-variation-settings: 'wght' var(--title-width);
     border-inline: 2px solid var(--border-color);
     border-block-start: 2px solid var(--border-color);
 }
@@ -230,6 +223,7 @@
 .card__image {
     position: relative;
     border: 2px solid var(--border-color);
+    aspect-ratio: 1;
 }
 
 .card__image-text {
@@ -242,6 +236,13 @@
     opacity: 0.5;
     text-shadow: 1px 0 0 var(--text-on-img), 0 1px var(--text-on-img),
         1px 0 var(--text-on-img), 0 -1px var(--text-on-img);
+}
+
+@media (max-width: 500px) {
+    .card__image-text {
+        right: 12px;
+        top: 23px;
+    }
 }
 
 @supports (
@@ -292,7 +293,7 @@
 }
 
 .card__info {
-    padding: 25px;
+    padding: 26px;
     border-inline: 2px solid var(--border-color);
 }
 
@@ -301,30 +302,39 @@
     line-height: 21px;
 }
 
+@media (max-width: 500px) {
+    .card__info-text {
+        padding-inline-end: 1px;
+    }
+}
+
 .card__info p:not(:last-child) {
     margin-bottom: 26px;
 }
 
 .card__interactive {
     padding-inline: 25px;
-    padding-block-end: 21px;
+    padding-block-end: 27px;
     display: flex;
-    align-items: center;
     justify-content: end;
     border-inline: 2px solid var(--border-color);
     border-block-end: 2px solid var(--border-color);
+    gap: 8px;
 }
 
 .card__interactive-button {
     width: 130px;
-    padding-block: 10px;
+    height: 36px;
     line-height: 90%;
 }
 
 .card__icon-button {
     background-color: transparent;
-    border: 2px solid transparent;
+    border: none;
+    padding: 0;
     transition: border-color 0.3s ease;
+    transition: outline 0.3s ease;
+    height: 36px;
 }
 
 .card__icon-button:focus {
@@ -333,26 +343,25 @@
 
 .card__icon-button:focus-visible {
     outline: 2px solid var(--text-color);
-    transition: outline 0.3s ease;
 }
 
-.footer {
+.bottom {
     margin-bottom: 103px;
 }
 
-.footer .container {
+.bottom .container {
     display: flex;
     justify-content: center;
 }
 
-.footer__button {
+.bottom__button {
     padding: 16px 21px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.footer__floppy {
+.bottom__floppy {
     width: 21px;
     height: 21px;
 }
@@ -371,7 +380,7 @@
 
 .dialog::backdrop {
     background: black;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 .dialog__main {
@@ -381,11 +390,15 @@
 }
 
 @media (max-width: 500px) {
-    .footer__button {
+    .dialog[open] {
+        padding-inline: 48px;
+    }
+
+    .bottom__button {
         flex-direction: column;
     }
 
-    .footer__floppy {
+    .bottom__floppy {
         width: 28px;
         height: 28px;
     }

@@ -27,12 +27,17 @@
     transition: fill 0.3s 0.03s linear;
 }
 
+.contour {
+    transition: fill 0.3s linear;
+}
+
 .main-body {
     transition: fill 0.3s linear;
 }
 
 .like-icon {
     cursor: pointer;
+    transform-origin: center;
 }
 
 .like-icon:hover .core {
@@ -78,9 +83,17 @@
     animation: sparks-appear 0.3s 0.3s ease-in alternate;
 }
 
-.like-icon.is-liked .heart {
+.like-icon.is-liked {
     animation: heart-beat 0.3s 0.1s ease-in alternate;
-    transform-origin: center;
+}
+
+@keyframes headerAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(4px);
+    }
 }
 
 @keyframes heart-beat {

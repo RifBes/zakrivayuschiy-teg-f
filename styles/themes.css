@@ -9,11 +9,6 @@
     --text-color: #000;
     --border-color: #000;
     --bg-color: #fff;
-    --bg-color-grad: linear-gradient(
-        180deg,
-        rgb(231, 231, 231),
-        rgb(26, 26, 26) 100%
-    );
     --button-color: #fff;
     --color-accent: #000;
 
@@ -33,11 +28,6 @@
     --text-color: #00cc14;
     --border-color: #00cc14;
     --bg-color: #000;
-    --bg-color-grad: linear-gradient(
-        180deg,
-        rgb(0, 127, 12),
-        rgb(0, 67, 6) 100%
-    );
     --button-color: #00cc14;
     --color-accent: #00cc14;
 
@@ -58,11 +48,6 @@
         --text-color: #00cc14;
         --border-color: #00cc14;
         --bg-color: #000;
-        --bg-color-grad: linear-gradient(
-            180deg,
-            rgb(0, 127, 12),
-            rgb(0, 67, 6) 100%
-        );
         --button-color: #00cc14;
         --color-accent: #00cc14;
 
@@ -73,5 +58,8 @@
         --gradient-color-to: #004306;
 
         --heart-countor: #00cc14;
+
+        --text-width: 465;
+        --title-width: 785;
     }
 }
